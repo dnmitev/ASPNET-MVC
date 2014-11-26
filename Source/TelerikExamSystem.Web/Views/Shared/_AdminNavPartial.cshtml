@@ -1,0 +1,11 @@
+﻿@using TelerikExamSystem.Common;
+@if (this.User.IsInRole(TelerikExamSystem.Common.GlobalConstants.AdminRoleName))
+{
+    <li>
+        Admin
+        <ul>
+            <li>@Html.ActionLink("Menu 1", "Index", "Home", new { Area = GlobalConstants.AdminRoleName }, null)</li>
+            <li>@Html.ActionLink("Menu 2", "Index", "Home", new { Area = GlobalConstants.AdminRoleName }, null)</li>
+        </ul>
+    </li>
+}
